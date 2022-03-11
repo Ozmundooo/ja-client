@@ -8,7 +8,7 @@ import axios from 'axios';
 import './Property.scss';
 
 const API_URL = process.env.NODE_ENV === "production" ?
-'https://' :
+'https://ja-realty-server.herokuapp.com' :
 'http://localhost:8080';
 
 
