@@ -1,0 +1,63 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.testimonialtext {
+	background-color: $brown;
+	padding: 3rem 7.778rem;
+	margin: 5rem 0 3rem;
+	display: flex;
+	justify-content: center;
+	@include tablet {
+		padding: 2.333rem 3.056rem;
+		margin: 3.056rem 0 2rem;
+	}
+	@include mobile {
+		padding: 1.667rem 1.111rem;
+		margin: 1.778rem 0 1.8rem;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 600px;
+	}
+	&__name {
+		@include sectionTitle;
+		color: $beige;
+		@include tablet {
+			font-size: 1.111rem;
+		}
+		@include mobile {
+			font-size: 0.778rem;
+		}
+	}
+	&__divider {
+		width: 300px;
+		height: 3px;
+		background-color: $beige;
+		margin: 1.5rem 0;
+		@include tablet {
+			width: 170px;
+			height: 2px;
+			margin: 1rem 0;
+		}
+		@include mobile {
+			width: 120px;
+			height: 1px;
+			margin: 0.5rem 0;
+		}
+	}
+	&__text {
+		text-align: center;
+		@include regularText;
+		color: $beige;
+		@include tablet {
+			font-size: 0.667rem;
+			line-height: 1.12rem;
+		}
+		@include mobile {
+			font-size: 0.556rem;
+			line-height: 1rem;
+		}
+	}
+}

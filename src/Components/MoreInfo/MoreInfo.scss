@@ -1,0 +1,31 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.moreinfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	background-color: $navy;
+	padding: 3rem 0 2rem;
+	&__title {
+		color: $beige;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 1.563rem;
+		line-height: 2.735rem;
+		max-width: 800px;
+		text-align: center;
+	}
+	&__buttonbox {
+		margin-top: 1rem;
+	}
+	&__button {
+		background-color: $tan;
+		color: $beige;
+		border-radius: 38px;
+		width: 170px;
+		height: 40px;
+		margin: 0 2rem;
+	}
+}

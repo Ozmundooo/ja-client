@@ -1,0 +1,36 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.amenities {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2rem;
+	&__title {
+		@include sectionTitle;
+		color: $brown;
+		margin: 4rem 0 2rem;
+	}
+	&__imagebox {
+
+	}
+	&__tabbox {
+		display: flex;
+		justify-content: flex-start;
+	}
+	&__button {
+		background-color: $teal;
+		color: $beige;
+		width: 150px;
+		height: 50px;
+		margin-right: 0.1rem;
+		border-radius: 5px 5px 0 0;
+		&--active {
+			background-color: $navy;
+		}
+	}
+	&__image {
+		width: 100%;
+	}
+}

@@ -1,0 +1,63 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.carouselGeneral {
+	padding: 3.828rem 3rem 0.75rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include mobile {
+		padding: 1.5rem 1rem 0.5rem;
+	}
+	&__title {
+		color: $brown;
+		margin-bottom: 3rem;
+		@include sectionTitle;
+		@include tablet {
+			font-size: 1.111rem;
+		}
+		@include mobile {
+			font-size: 1rem;
+			margin-bottom: 2rem;
+		}
+	}
+	&__carousel {
+		width: 100%;
+		max-width: 1300px;
+	}
+	&__image {
+		width: 255.624px;
+		height: 255.624px;
+		object-fit: cover;
+		@include tablet {
+			width: 163px;
+			height: 163px;
+		}
+		@include mobile {
+			width: 110px;
+			height: 110px;
+		}
+		&--localpicks{
+			margin: 0 auto;
+		}
+	}
+	&__button {
+		background-color: rgba(0,0,0,0);
+	}
+	&__buttonimage {
+		width: 12.504px;
+		height: 28.128px;
+		@include tablet {
+			width: 9px;
+			height: 19px;
+		}
+	}
+	&__desc {
+		font-family: 'bicyclette';
+		font-weight: 900;
+		color: $brown;
+		font-size: 1.2rem;
+		text-align: center;
+		margin-top: 1rem;
+	}
+}

@@ -1,0 +1,111 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.staffIntro {
+	padding: 3rem 5.156rem 1rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	@include tablet {
+		padding: 2rem 4.813rem 2rem 3.875rem;
+	}
+	@include mobile {
+		padding: 0;
+	}
+	&__content {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		max-width: 1400px;
+		&--inverse {
+			flex-direction: row-reverse;
+		}
+		@include mobile {
+			padding: 1.667rem 1.944rem;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+	&__image {
+		width: 55%;
+		@include tablet {
+			width: 45%;
+		}
+		@include mobile {
+			width: 100%;
+		}
+	}
+	&__contentBox {
+		width: 45%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include tablet {
+			width: 55%;
+		}
+		@include mobile {
+			width: 100%;
+			margin-top: 25px;
+			text-align: center;
+		}
+	}
+	&__name {
+		color: $brown;
+		@include sectionTitle;
+		@include tablet {
+			font-size: 0.9rem;
+		};
+		@include mobile {
+			font-size: 0.778rem;
+		}
+	}
+	&__position {
+		color: $brown;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 1.4rem;
+		margin-top: 1rem;
+		@include tablet {
+			font-size: 0.65rem;
+			margin-top: 0.688rem;
+		};
+		@include mobile {
+			font-size: 0.667rem;
+			margin-top: 0.667rem;
+		}
+	}
+	&__text {
+		margin: 2rem 0 2rem;
+		text-align: center;
+		@include regularText;
+		@include tablet {
+			font-size: 0.65rem;
+			margin: 1.125rem 0 0.438rem;
+			line-height: 1.25rem;
+		}
+		@include mobile {
+			font-size: 0.667rem;
+			margin: 0.667rem 0 0.278rem;
+			line-height: 1.12rem;
+		}
+	}
+	&__button {
+		background-color: $navy;
+		border-radius: 38px;
+		color: $beige;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 1.1rem;
+		width: 250px;
+		height: 50px;
+		@include tablet {
+			font-size: 0.5rem;
+			width: 115px;
+			height: 30px;
+		}
+		@include mobile {
+			width: 120px;
+			height: 25px;
+		}
+	}
+}	

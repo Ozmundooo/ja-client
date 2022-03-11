@@ -1,0 +1,78 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.businesscard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: calc(100% /2 - 4rem);
+	height: 100%;
+	margin: 0 0 5rem;
+	@include mobile {
+		width: 100%;
+		margin: 0 0 2rem;
+	}
+	&__image {
+		width: 100%;
+	}
+	&__title {
+		font-family: 'bicyclette';
+		font-weight: 900;
+		font-size: 1.4rem;
+		color: $brown;
+		margin: 1.5rem 0 0.75rem;
+		@include tablet {
+			font-size: 0.778rem;
+			margin: 0.833rem 0 0.556rem;
+		};
+	}
+	&__subtitle {
+		color: $brown;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 1rem;
+		text-align: center;
+		@include tablet {
+			font-size: 0.778rem;
+		};
+	}
+	&__text {
+		font-family: 'bicyclette';
+		font-weight: 400;
+		font-size: 1rem;
+		line-height: 1.562rem;
+		color: $black;
+		text-align: center;
+		margin: 0.75rem 0 1.5rem;
+		height: 140px;
+		@include tablet {
+			font-size: 0.778rem;
+			line-height: 1.2rem;
+			margin: 0.75rem 0 0.833rem;
+			height: 130px;
+		};
+		@include mobile {
+			line-height: 1rem;
+			font-size: 0.667rem;
+			height: 100%;
+		}
+	}
+	&__link {
+
+	}
+	&__button {
+		background-color: $navy;
+		border-radius: 38px;
+		color: $beige;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 1.2rem;
+		width: 170px;
+		height: 40px;
+		@include tablet {
+			font-size: 0.5rem;
+			width: 100px;
+			height: 25px;
+		}
+	}
+}

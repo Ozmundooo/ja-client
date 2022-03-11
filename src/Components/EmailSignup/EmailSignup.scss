@@ -1,0 +1,109 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.emailSignup {
+	background-color: $navy;
+	display: flex;
+	justify-content: center;
+	padding: 4.571rem 0 2.891rem;
+	margin-top: 5rem;
+	@include desktop{
+		align-items: center;
+	}
+	@include tablet {
+		padding: 4rem 5rem 3rem;
+	}
+	@include mobile {
+		margin-top: 2.218rem;
+		flex-direction: column;
+		align-items: center;
+		padding: 2rem 0;
+	}
+	&--brown {
+		background-color: $brown;
+	}
+	&--notop {
+		margin-top: 0rem;
+	}
+	&__textbox {
+		margin-right: 60px;
+		width: 350px;
+		@include tablet {
+			margin-right: 0;
+		}
+		@include mobile {
+			width: 250px;
+		}
+	}
+	&__title {
+		color: $beige;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 1.758rem;
+		margin-bottom: 1.75rem;
+		text-align: center;
+		@include tablet {
+			font-size: 0.889rem;
+			margin-bottom: 0.944rem;
+		}
+		@include mobile {
+			font-size: 0.778rem;
+			margin-bottom: 0.778rem;
+		}
+	}
+	&__text {
+		color: $beige;
+		font-family: 'bicyclette';
+		font-weight: 400;
+		font-size: 1.172rem;
+		text-align: center;
+		@include tablet {
+			font-size: 0.778rem;
+		}
+		@include mobile {
+			font-size: 0.667rem;
+			margin-bottom: 1rem;
+		}
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-left: 60px;
+		@include mobile {
+			margin-left: 0;
+		}
+	}
+	&__input {
+		width: 519.996px;
+		height: 42px;
+		margin-bottom: 2rem;
+		@include tablet {
+			width: 330px;
+			height: 30px;
+		}
+		@include mobile {
+			width: 250px;
+			height: 25px;
+			margin-bottom: 0.944rem;
+		}
+	}
+	&__button {
+		background-color: $tan;
+		color: $beige;
+		border-radius: 38px;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 1.1rem;
+		width: 170px;
+		height: 40px;
+		@include tablet {
+			width: 110px;
+			height: 25px;
+			font-size: 0.5rem;
+		}
+		@include mobile {
+			width: 100px;
+		}
+	}
+}

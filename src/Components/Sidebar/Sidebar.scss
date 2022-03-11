@@ -1,0 +1,44 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.bm-burger-button {
+  position: absolute;
+  width: 30px;
+  height: 23px;
+  right: 20px;
+  top: 32px;
+}
+
+.bm-burger-bars {
+  background: $navy;
+}
+
+.bm-menu {
+  background: $beige;
+  padding: 2.5rem;
+  font-size: 1rem;
+}
+
+.bm-item-list {
+  // color: $beige;
+  // text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  margin-right: 0;
+}
+
+.bm-item {
+  display: inline-block;
+  margin: 1rem 0;
+  color: $beige;
+  transition: color 0.2s;
+}
+
+.bm-item:hover, .bm-item:focus {
+  color: $teal;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}

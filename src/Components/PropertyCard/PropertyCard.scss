@@ -1,0 +1,58 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.propertycard {
+	display: flex;
+	flex-direction: column;
+	width: 285px;
+	margin-bottom: 3.672rem;
+	@include tablet {
+		width: 250px;
+		margin-bottom: 1.389rem;
+	};
+	@include mobile{
+		width: 150px;
+	}
+	&__img {
+		width: 285px;
+		height: 285px;
+		object-fit: cover;
+		@include tablet {
+			width: 250px;
+			height: 200px;
+		}
+	}
+	&__title {
+		font-family: 'bicyclette';
+		font-size: 1.25rem;
+		font-weight: 900;
+		color: $brown;
+		margin: 1rem 0 0.5rem;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		width: 100%;
+		@include tablet {
+			font-size: 0.889rem;
+		};
+	}
+	&__text {
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 1.25rem;
+		color: $navy;
+		margin-bottom: 0.25rem;
+		@include tablet {
+			font-size: 0.778rem;
+		};
+	}
+	&__subtext {
+		font-family: 'bicyclette';
+		font-size: 1rem;
+		color: $black;
+		margin-bottom: 0;
+		@include tablet {
+			font-size: 0.667rem;
+		};
+	}
+}

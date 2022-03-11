@@ -1,0 +1,101 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.values {
+	background-color: $brown;
+	padding: 4.297rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include tablet {
+		padding: 2.813rem 0 3rem;
+	}
+	@include mobile {
+		padding: 1.556rem 0; 
+	}
+	&__title {
+		@include sectionTitle;
+		color: $beige;
+		margin-bottom: 4.688rem;
+		@include tablet {
+			margin-bottom: 2.556rem;
+			font-size: 1.1rem;
+		}
+		@include mobile {
+			margin-bottom: 1.389rem;
+			font-size: 0.889rem;
+		}
+	}
+	&__list {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		max-width: 1000px;
+		@include tablet {
+			max-width: 700px;
+		}
+		@include mobile {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__box {
+		width: 50%;
+		display: flex;
+		justify-content: space-around;
+		@include mobile {
+			width: 70%;
+		}
+	}
+}
+
+.valuecard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 185px;
+	@include tablet {
+		width: 130px;
+	}
+	@include mobile {
+		width: 110px;
+		padding: 10px;
+	}
+	&__image {
+		height: 95px;
+		@include tablet {
+			height: 60px;
+		}
+		@include mobile {
+			height: 35px;
+		}
+	}
+	&__title {
+		color: $beige;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 1.4rem;
+		margin: 1rem 0;
+		@include tablet {
+			font-size: 0.8rem;
+			margin: 0.833rem 0;
+		}
+		@include mobile {
+			font-size: 0.667rem;
+			margin: 0.667rem 0;
+		}
+	}
+	&__text {
+		color: $beige;
+		text-align: center;
+		font-family: 'bicyclette';
+		font-weight: 400;
+		font-size: 1.1rem;
+		@include tablet {
+			font-size: 0.65rem;
+		}
+		@include mobile {
+			font-size: 0.556rem;
+		}
+	}
+}

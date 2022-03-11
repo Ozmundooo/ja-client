@@ -1,0 +1,40 @@
+@mixin mobile {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (max-width: 1023px) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (min-width: 1024px) {
+		@content;
+	}
+}
+@mixin medium {
+	@media (min-width: 1025px) {
+		@content;
+	}
+}
+
+@mixin sectionTitle {
+	font-family: 'bicyclette';
+	font-weight: 900;
+	font-size: 2rem;
+	@include tablet {
+		font-size: 1.875rem;
+	}
+}
+@mixin regularText {
+	font-family: 'bicyclette';
+	font-weight: 400;
+	font-size: 1.3rem;
+	line-height: 1.562rem;
+	color: $black;
+	// @include tablet {
+	// 	font-size: 0.75rem;
+	// 	line-height: 1.125rem;
+	// }
+}

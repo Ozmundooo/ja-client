@@ -1,0 +1,126 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	&__navbox {
+		display: flex;
+		justify-content: center;
+		padding: 5rem 5.469rem 5.586rem;
+		@include tablet {
+			padding: 4.278rem 5.469rem 2.111rem;
+		}
+		@include mobile {
+			padding: 2.167rem 2rem 1.178rem;
+		}
+	}
+	&__nav {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include tablet {
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+		@include mobile {
+			align-items: center;
+		}
+	}
+	&__navgroup {
+		display: flex;
+		justify-content: space-between;
+		@include tablet {
+			flex-direction: column;
+		}
+		&--tablet {
+			@include desktop {
+				display: none;
+			}
+		}
+	}
+
+	&__snsgroup {
+		display: flex;
+		margin-left: 6.333rem;
+		@include tablet {
+			padding: 10px;
+			margin-left: 0;
+		}
+		@include mobile {
+			display: none;
+		}
+	}
+	&__link {
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 1.1rem;
+		color: $black;
+		margin-right: 1.367rem;
+		@include tablet {
+			font-size: 0.722rem;
+			padding: 10px;
+		}
+		@include mobile {
+			font-size: 0.5rem;
+			margin-right: 0;
+			padding: 5px;
+		}
+		&--desktop {
+			@include mobile {
+				display: none;
+			}
+			@include tablet {
+				display: none;
+			}
+		}
+	}
+	&__sns {
+
+	}
+	&__snsimage {
+		height: 31px;
+		margin: 0 1.556rem;
+		@include tablet {
+			height: 20px;
+			margin: 0 1rem;
+		}
+		@include mobile {
+			height: 15px;
+			margin: 0 0.5rem;
+		}
+	}
+	&__bar {
+		background-color: $brown;
+		height: 56px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include tablet {
+			height: 35px;
+		}
+		@include mobile {
+			height: 20px;
+		}
+	}
+	&__bartext {
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 1rem;
+		color: $beige;
+		@include tablet {
+			font-size: 0.667rem;
+		}
+		@include mobile {
+			font-size: 0.444rem;
+		}
+	}
+	&__hiddensns {
+		display: none;
+		@include mobile {
+			display: flex;
+			margin-top: 10px;
+		}
+	}
+}

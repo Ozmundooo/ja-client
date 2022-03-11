@@ -1,0 +1,41 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.selectbar {
+	background-color: $brown;
+	padding: 1rem 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include tablet {
+		padding: 1rem 3.056rem;
+	};
+	@include mobile {
+		padding: 0.556rem 1.056rem ;
+	};
+	&__select {
+		height: 35px;
+		width: 650px;
+		border: none;
+		@include tablet {
+			width: 550px;
+			height: 25px;
+		};
+		@include mobile {
+			width: 160px;
+			height: 17px;
+		};
+	};
+	&__book {
+		
+		font-weight: 700;
+		font-size: 1.1rem;
+		color: $beige;
+		@include tablet {
+			font-size: 0.667rem;			
+		};
+		@include mobile {
+			font-size: 0.556rem;
+		}
+	}
+}

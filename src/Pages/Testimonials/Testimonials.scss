@@ -1,0 +1,109 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.herotestimonial {
+	&__image {
+		width: 100%;
+		@include tablet {
+			height: 330px;
+		}
+		@include mobile {
+			height: 245px;
+		}
+	}
+}
+
+.happyclients {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3rem 5rem 0;
+	@include tablet {
+		padding: 3rem 4.444rem 0;
+	};
+	@include mobile {
+		padding: 1rem 2.222rem;
+	};
+	&__title {
+		@include sectionTitle;
+		color: $brown;
+		margin-bottom: 4rem;
+		@include tablet {
+			font-size: 1.667rem;
+			margin-bottom: 2.333rem;
+		}
+		@include mobile {
+			font-size: 0.778rem;
+			margin-bottom: 1.333rem;
+		}
+	}
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 1200px;
+		@include tablet {
+			max-width: 610px;
+		};
+		@include mobile {
+			max-width: 250px;
+		};
+	}
+}
+
+.clientcard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__image {
+		width: 285px;
+		margin-bottom: 1rem;
+		@include tablet {
+			width: 175px;
+		};
+		@include mobile {
+			width: 110px;
+		}
+	}
+	&__name {
+		color: $brown;
+		font-family: 'bicyclette';
+		font-weight: 900;
+		font-size: 1.6rem;
+		@include tablet {
+			font-size: 0.889rem;
+		};
+		@include mobile {
+			font-size: 0.556rem;
+		};
+	}
+	&__location {
+		color: $brown;
+		margin: 1rem 0;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 1.2rem;
+		@include tablet {
+			font-size: 0.611rem;
+			margin: 0.722rem 0;
+		};
+		@include mobile {
+			font-size: 0.5rem;
+			margin: 0.389rem 0;
+		}
+	}
+	&__sale {
+		@include tablet {
+			font-size: 0.889rem;
+		};
+		@include mobile {
+			font-size: 0.389rem;
+		}
+	}
+}
+
+.clientcard:nth-of-type(3) {
+	@include mobile {
+		display: none;
+	}
+}

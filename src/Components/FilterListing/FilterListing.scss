@@ -1,0 +1,91 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.filterlisting {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	max-width: 1100px;
+	padding: 1rem 0.5rem;
+	margin-bottom: 4rem;
+	background-color: $blue;
+	@include mobile {
+		padding: 1rem 1rem 0.5rem;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 1.789rem;
+	}
+	&__column {
+		width: 31%;
+		display: flex;
+		flex-direction: column;
+		&--mid {
+			margin: 0 2.5%;
+			@include mobile {
+				margin: 0;
+			};
+		};
+		@include mobile {
+			width: 100%;
+		}
+	}
+	&__column:nth-of-type(1) {
+		margin-bottom: 1rem;
+	}
+	&__slider {
+		margin-bottom: 1rem;
+	}
+	&__input {
+		border: none;
+		padding: 0.5rem;
+		@include tablet {
+			height: 25px;
+			padding: 0;
+		};
+		@include mobile {
+			height: 20px;
+		}
+	}
+	&__label {
+		color: $beige;
+		font-weight: 500;
+		font-size: 0.85rem;
+		margin: 0.1rem 0 0.5rem;
+		@include tablet {
+			font-size: 0.667rem;
+			margin: 0.278rem 0 0.611rem;
+		};
+		@include mobile {
+			font-size: 0.611rem;
+			margin: 0.333rem 0;
+		}
+	}
+	&__text {
+		color: $beige;
+		font-size: 1rem;
+		font-weight: 500;
+		@include tablet {
+			font-size: 0.667rem;
+		};
+		@include mobile {
+			font-size: 0.611rem;
+		}
+	}
+	&__button {
+		background-color: $tan;
+		color: $beige;
+		margin-top: 1.5rem;
+		margin-bottom: 1rem;
+		border-radius: 38px;
+		font-weight: 700;
+		width: 180px;
+		height: 33px;
+		font-size: 1.2rem;
+		@include tablet {
+			width: 100px;
+			height: 20px;
+			font-size: 0.556rem;
+		}
+	}
+}

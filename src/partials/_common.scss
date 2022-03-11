@@ -1,0 +1,41 @@
+@import './colors';
+
+* {
+	padding: 0;
+	margin: 0;
+}
+p {
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+html {
+	box-sizing: border-box;
+	background-color: $beige !important;
+}
+body {
+	background-color: $beige !important;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+img {
+	display: block; //fix minor vertical positioning issue
+}
+a {
+	text-decoration: none !important;
+}
+ul, li {
+	list-style-type: none;
+}
+textarea {
+	resize: none;
+}
+button {
+	outline: none;
+	border: none;
+	cursor: pointer;
+}

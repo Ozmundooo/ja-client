@@ -1,0 +1,59 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.heroontario {
+  &__image {
+    width: 100%;
+  }
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 9.25rem;
+  @include tablet {
+    margin-top: 4.444rem;
+  };
+  @include mobile {
+    margin-top: 2.889rem;
+    padding: 0 1.944rem;
+  }
+  .steps__title {
+    font-family: 'bicyclette';
+    font-size: 2rem;
+    font-weight: 900;
+    color: $brown;
+    margin-bottom: 4.68rem;
+    @include tablet {
+      font-size: 1.667rem;
+      margin-bottom: 3.333rem;
+    };
+    @include mobile {
+      font-size: 0.889rem;
+      margin-bottom: 1.833rem;
+      text-align: center;
+    }
+  }
+  .steps__button {
+    margin-top: 4.68rem;
+    background-color: $navy;
+		border-radius: 38px;
+		color: $beige;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 0.75rem;
+		width: 200px;
+		height: 40px;
+    @include tablet {
+      margin-top: 0;
+      width: 180px;
+      height: 35px;
+      font-size: 0.5rem;
+    };
+    @include mobile {
+      width: 138px;
+      height: 24px;
+    }
+  }
+}

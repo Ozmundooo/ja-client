@@ -1,0 +1,125 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.propertyoverview {
+	display: flex;
+	flex-direction: column;
+	padding: 4.024rem 5.469rem 1rem 4.024rem;
+	@include tablet {
+		padding: 2.889rem 4.444rem 1.056rem;
+	};
+	@include mobile {
+		padding: 2.222rem 1.544rem 1.667rem;
+	}
+	&__addressbox {
+		display: flex;
+		justify-content: space-between;
+		&--inactive {
+			padding-left: 0;
+		}
+		@include tablet {
+			flex-direction: column;
+		}
+	}
+	&__address {
+		color: $brown;
+		@include sectionTitle;
+		@include tablet {
+			font-size: 1.333rem;
+			margin-bottom: 1.222rem;
+		};
+		@include mobile {
+			font-size: 0.889rem;
+			margin-bottom: 0.833rem;
+		}
+	}
+	&__price {
+		color: $brown;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 2rem;
+		font-weight: 700;
+		@include tablet {
+			font-size: 1.333rem;
+		};
+		@include mobile {
+			font-size: 0.889rem;
+		}
+	}
+	&__detail {
+		color: $navy;
+		font-size: 1.641rem;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		margin: 2rem 0;
+		@include tablet {
+			font-size: 1.111rem;
+			margin: 1.111rem 0;
+		};
+		@include mobile {
+			font-size: 0.667rem;
+			margin: 1.056rem 0;
+		}
+	}
+	&__detailbox {
+		display: flex;
+		justify-content: space-between;
+		@include mobile {
+			flex-direction: column-reverse;
+		};
+	}
+	&__description {
+		@include regularText;
+		margin-top: 1rem;
+		padding-right: 2rem;
+		@include tablet {
+			margin-top: 0;
+			font-size: 0.889rem;
+			line-height: 1.362rem;
+		};
+		@include mobile {
+			padding-right: 0;
+			font-size: 0.667rem;
+			line-height: 1rem;
+		}
+	}
+	&__buttonbox {
+		display: flex;
+		flex-direction: column;
+		width: 250px;
+		&--inactive {
+			display: none;
+		};
+		@include tablet {
+			width: 140px;
+		};
+		@include mobile {
+			width: 100%;
+			flex-direction: row;
+			margin-bottom: 1.5rem;
+		};
+	}
+	&__button {
+		background-color: $navy;
+		margin-bottom: 2rem;
+		height: 50px;
+		width: 250px;
+		color: $beige;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		border-radius: 38px;
+		@include tablet {
+			width: 140px;
+			height: 35px;
+			font-size: 0.5rem;
+			margin-bottom: 1.111rem;
+		};
+		@include mobile {
+			width: 120px;
+			height: 25px;
+			font-size: 0.444rem;
+			margin-right: 1rem;
+			margin-bottom: 0;
+		};
+	}
+}

@@ -1,0 +1,129 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.header {
+	padding: 3.594rem 4.313rem 2.3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	z-index: 7;
+	@include tablet {
+		padding: 1.65rem 2rem 1rem;
+	}
+	@include mobile {
+		padding: 1.65rem 1.5rem 1rem;
+	}
+	&__nav {
+		display: flex;
+		align-items: center;
+	}
+	&__logo {
+		width: 95px;
+		@include tablet {
+			width: 63px;
+		}
+		@include mobile {
+			width: 50px;
+		}
+	}
+	&__container {
+		display: flex;
+		@include mobile {
+			display: none;
+		}
+	}
+	&__link {
+		color: $black;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 1.1rem;
+		margin-right: 31px;
+		&--logo {
+			margin-right: 50px;
+		}
+		@include tablet {
+			font-size: 0.611rem;
+		}
+	}
+	&__buttonbox {
+		@include mobile {
+			margin-right: 3rem;
+		}
+	}
+	&__button {
+		background-color: $navy;
+		color: $beige;
+		border-radius: 38px;
+		width: 200px;
+		height: 40px;
+		font-family: 'bicyclette';
+		font-weight: 700;
+		font-size: 1rem;
+	}
+	@include tablet {
+		padding: 1.65rem 2rem 1rem;
+		&__logo {
+			width: 40px;
+		}
+		&__link {
+			font-size: 0.65rem;
+		}
+		&__button {
+			width: 126px;
+			height: 24px;
+			font-size: 0.6rem;
+		}
+	}
+	@include mobile {
+		padding: 1.65rem 1.5rem 1rem;
+		&__container {
+			display: none;
+		}
+		&__buttonbox {
+			margin-right: 2.8rem;
+		}
+		&__button {
+			width: 110px;
+			height: 23px;
+			font-size: 0.6rem;
+		}
+		&__link {
+			margin-right: 0;
+		}
+	}
+}
+
+// hamburger button on mobile view
+.bm-burger-button {
+	display: none;
+}
+
+@media (max-width: 767px) {
+	.bm-burger-button {
+		display: block;
+	}
+}
+
+//dropdown menu
+.headerdropdown {
+	background-color: rgba(0,0,0,0) !important;
+}
+.btn-primary {
+	background-color: rgba(0,0,0,0) !important;
+	border: none !important;
+	color: $black !important;
+	font-family: 'bicyclette' !important;
+	font-weight: 700 !important;
+	font-size: 1.1rem !important;
+	margin-right: 31px !important;
+}
+.btn {
+	padding: 0 !important;
+}
+.dropdown-item {
+	color: $black !important;
+	font-family: 'bicyclette' !important;
+	font-weight: 700 !important;
+	font-size: 1.1rem !important;
+}

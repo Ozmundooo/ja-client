@@ -1,0 +1,24 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.lightbox {
+  margin: 0 2rem;
+  @include mobile {
+    margin: 0 0.5rem;
+  }
+  &__button {
+    background-color: $tan;
+    width: 150px;
+    height: 40px;
+    border-radius: 38px;
+    font-family: 'bicyclette';
+    font-size: 1rem;
+    font-weight: 700;
+    color: $beige;
+    @include tablet {
+      font-size: 0.667rem;
+      width: 110px;
+      height: 30px;
+    };
+  }
+}

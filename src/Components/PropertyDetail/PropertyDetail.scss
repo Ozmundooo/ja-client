@@ -1,0 +1,111 @@
+@import '../../partials/colors';
+@import '../../partials/mixins';
+
+.propertydetail {
+  padding: 2.024rem 5.469rem 6.446rem 4.024rem;
+  @include tablet {
+    padding: 2.024rem 4.444rem 3.056rem;
+  };
+  @include mobile {
+    padding: 0 1.544rem 1.667rem;
+  }
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+      margin-bottom: 2.611rem;
+    };
+    @include mobile {
+      margin-bottom: 1.667rem;
+    }
+  }
+  &__tablebox {
+    display: flex;
+    width: 65%;
+    @include tablet {
+      width: 100%;
+    };
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  &__table {
+    border-collapse: collapse;
+    width: calc(100% / 2);
+    margin-right: 2rem;
+    @include mobile {
+      width: 100%;
+      margin-right: 0;
+      text-align: center;
+    }
+    tr {
+      border-bottom: 1px solid #707070;
+      font-weight: 700;
+      @include mobile {
+        // 
+      }
+    };
+    // tr:nth-of-type(1) {
+    //   border-top: 1px solid #707070;
+    // }
+    tr:nth-of-type(8) {
+      border-bottom: none;
+    }
+    th {
+      font-size: 1rem;
+      color: $brown;
+      text-align: left;
+      @include tablet {
+        font-size: 0.778rem;
+      };
+      @include mobile {
+        font-size: 0.667rem;
+        width: 120px;
+      }
+    }
+    td {
+      font-size: 1rem;
+      padding: 1rem 0;
+      @include tablet {
+        font-size: 0.778rem;
+      };
+      @include mobile {
+        font-size: 0.667rem;
+        padding: 0.556rem 0 ;
+      }
+    }
+  }
+  &__map {
+    width: calc(100% / 3);
+    height: auto;
+    @include tablet {
+      display: none;
+    }
+  };
+  &__title {
+    font-size: 1.222rem;
+    font-weight: 700;
+    color: $brown;
+    margin-bottom: 1.544rem;
+    @include tablet {
+      font-size: 1.111rem;
+    };
+    @include mobile {
+      font-size: 0.889rem;
+      margin-bottom: 0.944rem;
+    }
+  };
+  &__hiddenmap {
+    width: 70%;
+    height: 320px;
+    display: block;
+    @include desktop {
+      display: none;
+    };
+    @include mobile {
+      width: 100%;
+      height: 250px;
+    };
+  }
+}
