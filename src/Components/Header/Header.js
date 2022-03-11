@@ -35,8 +35,8 @@ function Header(props) {
 							title="ONTARIO & FLORIDA"
 							className='headerdropdown'
 						>
-						  <Dropdown.Item href={`${ontarioURL}`}>ONTARIO</Dropdown.Item>
-						  <Dropdown.Item href={`${floridaURL}`}>FLORIDA</Dropdown.Item>
+						  <Dropdown.Item ><Link to='/ontario' className='header__link'>ONTARIO</Link></Dropdown.Item>
+						  <Dropdown.Item ><Link to='/florida' className='header__link'>FLORIDA</Link></Dropdown.Item>
 						</DropdownButton>
 						<Link to='/featured' className='header__link'>FEATURED LISTINGS</Link>
 					</div>
