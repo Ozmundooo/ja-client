@@ -30,14 +30,16 @@ function Header(props) {
 					<div className='header__container'>
 						<Link to='/about' className='header__link'>ABOUT</Link>
 						<Link to='/localpicks' className='header__link'>JULIAN'S LOCAL PICKS</Link>
-						<DropdownButton
+						<Link to='/ontario' className='header__link'>ONTARIO</Link>
+						<Link to='/florida' className='header__link'>FLORIDA</Link>
+						{/* <DropdownButton
 							id="dropdown-basic-button"
 							title="ONTARIO & FLORIDA"
 							className='headerdropdown'
 						>
-						  <Dropdown.Item ><Link to='/ontario' className='header__link'>ONTARIO</Link></Dropdown.Item>
-						  <Dropdown.Item ><Link to='/florida' className='header__link'>FLORIDA</Link></Dropdown.Item>
-						</DropdownButton>
+						  <Dropdown.Item ></Dropdown.Item>
+						  <Dropdown.Item ></Dropdown.Item>
+						</DropdownButton> */}
 						<Link to='/featured' className='header__link'>FEATURED LISTINGS</Link>
 					</div>
 				</nav>

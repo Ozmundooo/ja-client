@@ -25,6 +25,7 @@ function City(props) {
   const [sortBy, setSortBy] = React.useState('createdOnDesc');
   const [mlsNumber, setMlsNumber] = React.useState('');
   const [propertyType, setPropertyType] = React.useState('all');
+  // const [salesType, setSalesType] = React.useState('lease')
   const [beds, setBeds] = React.useState(0);
   const [baths, setBaths] = React.useState(0);
   const [priceRange, setPriceRange] = React.useState(['0', '5000000']);

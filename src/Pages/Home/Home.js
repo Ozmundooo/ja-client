@@ -160,11 +160,11 @@ function Home() {
         title={'Ontario featured properties'}
         images={onListings}
       />
-      <CarouselGeneral
+      {/* <CarouselGeneral
         linkSource={'property'}
         title={'Florida featured properties'}
         images={flListings}
-      />
+      /> */}
       <div className='abouthome'>
         <h2 className='abouthome__title'>About us</h2>
         <StaffIntro

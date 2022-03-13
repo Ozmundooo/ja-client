@@ -7,8 +7,8 @@ function Sidebar() {
     <Menu right>
       <Link to='/about' className='header__link'>ABOUT</Link>
       <Link to='/localpicks' className='header__link'>JULIAN'S LOCAL PICKS</Link>
-      <Link className='header__link'>ONTARIO</Link>
-      <Link className='header__link'>FLORIDA</Link>
+      <Link to='/ontario' className='header__link'>ONTARIO</Link>
+      <Link to='/florida' className='header__link'>FLORIDA</Link>
       <Link to='/featured' className='header__link'>FEATURED LISTINGS</Link>
     </Menu>
   )

@@ -52,7 +52,7 @@ function Ontario() {
           if (property.data().province === 'ON') {
             ontarioListings.push({
               link: `${property.data().id}`,
-              image: placeholderListing,
+              image: property.data().thumbnail,
               title: property.data().address,
               text: `${property.data().price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`,
               city: property.data().city,

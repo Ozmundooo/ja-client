@@ -38,17 +38,17 @@ function About() {
           image={imgAndres}
           name={'Andres F. Bojaca'}
           position={'Real Estate Agent'}
-          description={'With his strong experience in laws, foreign jurisdictions, and finance, Andres makes a powerful addition to the team. As a real estate agent, his attention to detail and critical problem solving skills allow him to tailor smart and stress-free solutions for each of our clients, both in English and Spanish.'}
+          description={'With his strong experience in laws, foreign jurisdictions, and finance, Andres makes a powerful addition to the team. As a real estate agent, his attention to detail and critical problem solving skills allow him to tailor smart and stress-free solutions for each of our clients, both in English and Spanish'}
           calendar='https://calendly.com/andresbzambrano'
         />
-      </div>
+      </div>  
       {/* <TestimonialVideo
         text={'Julian helped my family and I purchase our first home in Cambridge ON, he was very professional and patient answering all our questions. He is always a call away willing to help with anything you need. For professional and highly productive real estate services I will always recommend Julian Arcila. Thank you once again for everything you have done. - Felipe Alfonso'}
         page={'about'}
       /> */}
         <TestimonialVideo
           text={'Julian helped my family and I purchase our first home in Cambridge ON, he was very professional and patient answering all our questions. He is always a call away willing to help with anything you need. For professional and highly productive real estate services I will always recommend Julian Arcila. Thank you once again for everything you have done. - Felipe Alfonso'}
-          videoLink={'https://www.youtube.com/embed/n2bbzO0hzBA'}
+          videoLink={'https://www.youtube.com/embed/K7to6QeDGVg'}
           page={'about'}
         />
       <ContactForm />

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import './PropertyCard.scss';
 
 function PropertyCard(props) {
-  console.log(props.title)
   return (
     <Link
       to={

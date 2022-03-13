@@ -138,7 +138,7 @@ function Florida() {
         title={'Florida cities'}
         images={flCities}
       /> */}
-      <EmailSignup />
+      <EmailSignup theme="navy"/>
     </>
   );
 }

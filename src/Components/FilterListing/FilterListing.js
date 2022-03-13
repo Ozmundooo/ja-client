@@ -25,6 +25,7 @@ function FilterListing(props) {
           <option value="condo">Condo</option>
           <option value="commercial">Commercial</option>
         </select>
+        
       </div>
       <div className='filterlisting__column filterlisting__column--mid'>
         <p className='filterlisting__text'>Bedrooms: {props.beds === 0 ? 'Any' : props.beds}</p>
