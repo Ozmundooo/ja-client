@@ -12,8 +12,8 @@ import placeholderImage from '../../assets/images/placeholder_listing.png';
 import './PropertyListing.scss';
 
 const API_URL = process.env.NODE_ENV === "production" ?
-  'https://' :
-  'http://localhost:8080';
+  'https://ja-realty-server.herokuapp.com' :
+  'https://ja-realty-server.herokuapp.com';
 
 function PropertyListing(props) {
   const [property, setProperty] = React.useState({ price: 0 });

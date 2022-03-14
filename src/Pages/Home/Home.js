@@ -6,6 +6,7 @@ import StaffIntro from '../../Components/StaffIntro/StaffIntro';
 import TestimonialVideo from '../../Components/TestimonialVideo/TestimonialVideo';
 import EmailSignup from '../../Components/EmailSignup/EmailSignup';
 import heroHome from '../../assets/images/hero_home.png';
+import jaLogo from '../../assets/icons/icn_secondaryLogo.png'
 import imageAboutus from '../../assets/images/img_aboutus.png';
 import imageBurlington from '../../assets/images/thumb_burlington.png';
 import imageHamilton from '../../assets/images/thumb_hamilton.png';
@@ -143,7 +144,7 @@ function Home() {
       <section className='herohome'>
         <img src={heroHome} className='herohome__image' alt="" />
         <div className='herohome__contentbox'>
-          <h1 className='herohome__title'>J.A Real Estate Group</h1>
+          <img className='herohome__logo' src={jaLogo}></img>
           <h3 className='herohome__subtitle'>Search new listings now</h3>
           <div className='herohome__buttonbox'>
             <Link to='/ontario'>

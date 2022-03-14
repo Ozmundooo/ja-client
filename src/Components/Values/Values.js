@@ -9,7 +9,6 @@ function Values() {
     <section className='values'>
       <h3 className='values__title'>Our values</h3>
       <ul className='values__list'>
-        <ul className='values__box'>
           <li className='valuecard'>
             <img className='valuecard__image' src={icnDiscovery} alt="" />
             <h4 className='valuecard__title'>Discovery</h4>
@@ -24,8 +23,6 @@ function Values() {
               We ensure the highest value possible
             </p>
           </li>
-        </ul>
-        <ul className='values__box'>
           <li className='valuecard'>
             <img className='valuecard__image' src={icnUpstanding} alt="" />
             <h4 className='valuecard__title'>Upstanding</h4>
@@ -41,7 +38,6 @@ function Values() {
             </p>
           </li>
         </ul>
-      </ul>
     </section>
   );
 }
