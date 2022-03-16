@@ -25,7 +25,15 @@ function FilterListing(props) {
           <option value="condo">Condo</option>
           <option value="commercial">Commercial</option>
         </select>
-        
+        <br></br>
+        <select
+          className='filterlisting__input'
+          name="class"
+          onChange={(e) => props.setType(e.target.value)}
+        >
+          <option value="sale">Sale</option>
+          <option value="lease">Lease</option>
+        </select>        
       </div>
       <div className='filterlisting__column filterlisting__column--mid'>
         <p className='filterlisting__text'>Bedrooms: {props.beds === 0 ? 'Any' : props.beds}</p>

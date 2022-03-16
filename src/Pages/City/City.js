@@ -11,8 +11,8 @@ import placeholderProperty from '../../assets/images/icn_noimage.svg';
 import './City.scss';
 
 const API_URL = process.env.NODE_ENV === "production" ?
-  'https://ja-realty-server.herokuapp.com' :
-  'https://ja-realty-server.herokuapp.com';
+  'http://localhost:8080' :
+  'http://localhost:8080';
 
 function City(props) {
   const [currentCity, setCurrentCity] = React.useState({});
@@ -30,6 +30,7 @@ function City(props) {
   const [baths, setBaths] = React.useState(0);
   const [priceRange, setPriceRange] = React.useState(['0', '5000000']);
   const [sqRange, setSqRange] = React.useState(['0', '10000']);
+  const [type, setType] = React.useState('sale');
 
   React.useEffect(() => {
     getCityDetail(props.match.params.city);
@@ -100,7 +101,8 @@ function City(props) {
           beds: beds,
           baths: baths,
           price: priceRange,
-          sqRange: sqRange
+          sqRange: sqRange,
+          type: type
         }
       })
       .then(res => {
@@ -299,6 +301,8 @@ function City(props) {
           setPriceRange={setPriceRange}
           sqRange={sqRange}
           setSqRange={setSqRange}
+          type={type}
+          setType={setType}
         />
         <form className='city__sortbox'>
           <select className='city__select' name="sortBy" onChange={(e) => sortByHandler(e.target.value)}>

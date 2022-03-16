@@ -18,6 +18,7 @@ function PropertyCard(props) {
       <p className='propertycard__subtext'>
         {props.beds} Beds, {props.baths} Baths{props.sqfeet ? `, ${props.sqfeet.split(' ')[0].split('.')[0]} Sq. Ft.` : '' }{props.built ? `, Built ${props.built}` : ''}
       </p>
+      <p className='propertycard__subtext'>{props.type}</p>
     </Link>
   );
 }
