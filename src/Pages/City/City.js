@@ -11,8 +11,8 @@ import placeholderProperty from '../../assets/images/icn_noimage.svg';
 import './City.scss';
 
 const API_URL = process.env.NODE_ENV === "production" ?
-  'http://localhost:8080' :
-  'http://localhost:8080';
+  'https://ja-realty-server.herokuapp.com' :
+  'https://ja-realty-server.herokuapp.com';
 
 function City(props) {
   const [currentCity, setCurrentCity] = React.useState({});
