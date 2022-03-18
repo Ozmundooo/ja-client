@@ -60,11 +60,11 @@ function LocalPicks() {
         text={"Showing love to our community is crucial, and what better way to do so than showcasing some of the best local businesses that we believe deserve the spotlight?"}
         buttons={{
           buttonOne: {
-            link: 'https://j-arealestate.com/ontario',
+            link: 'https://j-arealestate.com/ontario#listings',
             text: 'ONTARIO PICKS'
           },
           buttonTwo: {
-            link: 'https://j-arealestate.com/florida',
+            link: 'https://j-arealestate.com/florida#listings',
             text: 'FLORIDA PICKS'
           }
         }}

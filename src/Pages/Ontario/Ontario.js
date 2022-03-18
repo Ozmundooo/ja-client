@@ -65,10 +65,14 @@ function Ontario() {
   const [baths, setBaths] = React.useState(0);
   const [priceRange, setPriceRange] = React.useState(['0', '5000000']);
   const [sqRange, setSqRange] = React.useState(['0', '10000']);
-
+  const [type,setType] = React.useState('sale');
   React.useEffect(() => {
     getFeaturedListings();
   }, []);
+
+  React.useEffect(() => {
+    getCityDetail('kitchener&city=waterloo&city=burlington&city=hamilton&city=london&city=milton');
+  }, ['kitchener&city=waterloo&city=burlington&city=hamilton&city=london&city=milton', pageNum, resultsPerPage, sortBy]);
 
   const getFeaturedListings = () => {
     firestore.collection('featuredproperty').get()
@@ -107,19 +111,13 @@ function Ontario() {
           .then(res => {
             let localPicks = [];
             res.docs.forEach(doc => {
-              if (cityDetails.province === 'ON' && doc.data().province === 'ON') {
+              if (doc.data().province === 'ON') {
                 localPicks.push({
                   image: doc.data().img,
                   link: doc.data().link,
                   name: doc.data().name
                 });
-              } else if (cityDetails.province === 'FL' && doc.data().province === 'FL') {
-                localPicks.push({
-                  image: doc.data().img,
-                  link: doc.data().link,
-                  name: doc.data().name
-                });
-              };
+               };
             });
             setLocalpicks(localPicks);
           })
@@ -148,7 +146,8 @@ function Ontario() {
           beds: beds,
           baths: baths,
           price: priceRange,
-          sqRange: sqRange
+          sqRange: sqRange,
+          type: type
         }
       })
       .then(res => {
@@ -345,7 +344,7 @@ function Ontario() {
 			</section> */}
       <br></br>
       <br></br>
-      <section className='city'>
+      <section className='city' id='listings'>
         <FilterListing
           submitHandler={filterSubmitHandler}
           mlsNumber={mlsNumber}
@@ -360,6 +359,8 @@ function Ontario() {
           setPriceRange={setPriceRange}
           sqRange={sqRange}
           setSqRange={setSqRange}
+          type={type}
+          setType={setType}
         />
         <form className='city__sortbox'>
           <select className='city__select' name="sortBy" onChange={(e) => sortByHandler(e.target.value)}>
@@ -412,11 +413,11 @@ function Ontario() {
           </button>
         </div>
       </section>
-      <CarouselGeneral
+      {/* <CarouselGeneral
         linkSource={'external'}
         title={currentProvince === 'ON' ? 'Julian’s Ontario local picks' : 'Julian’s Florida local picks'}
         images={localpicks}
-      />
+      /> */}
 			<CarouselGeneral
 				linkSource={'internal'}
 				title={'Ontario cities'}

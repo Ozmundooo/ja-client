@@ -5,6 +5,7 @@ import LightBoxCarousel from '../../Components/LightboxCarousel/LightBoxCarousel
 import MortgageCalculator from '../../Components/MortgageCalculator/MortgageCalculator';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import placeholderProperty from '../../assets/images/icn_noimage.svg';
 import './Property.scss';
 
 const API_URL = process.env.NODE_ENV === "production" ?
@@ -64,15 +65,25 @@ function Property(props) {
   return (
     <>
       <section className='heroproperty'>
-        <img className='heroproperty__img' src={`https://cdn.repliers.io/${propertyImage[0]}`} alt="property images" />
-        <div className="heroproperty__container">
-          <p className='heroproperty__text'>
-            {propertyImage ? `1 out of ${propertyImage.length}` : ''}
-          </p>
-          <LightBoxCarousel
-            imagesArr={propertyImage}
-          />
-        </div>
+        {
+          propertyImage.length > 0 ?
+          <>
+            <img className='heroproperty__img' src={`https://cdn.repliers.io/${propertyImage[0]}`} alt="property images" />
+            <div className="heroproperty__container">
+            <p className='heroproperty__text'>
+              {propertyImage ? `1 out of ${propertyImage.length}` : ''}
+            </p>
+            <LightBoxCarousel
+              imagesArr={propertyImage}
+            />
+            </div>
+          </>
+          :
+          <>
+          <img className='heroproperty__img' src={placeholderProperty} alt="property images" />
+          </>
+        }
+
       </section>
       <PropertyOverview
         address={propertyAddress.streetName}
