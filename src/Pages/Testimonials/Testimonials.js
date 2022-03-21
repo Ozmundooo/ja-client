@@ -21,12 +21,8 @@ function Testimonials() {
       <TestimonialText
         testimonials={[
           {
-            name: 'Client Name',
-            text: '“text text text text text text text text text text text texttext text text text text texttext text text text text text text text text text text texttext text text text text texttext text text text text texttext text text text text”'
-          },
-          {
-            name: 'Client Name',
-            text: '“text text text text text text text text text text text texttext text text text text texttext text text text text text text text text text text texttext text text text text texttext text text text text texttext text text text text”'
+            name: 'Yanet Echeverry',
+            text: '“Julian Arcila was very professional, experienced and helpful. He was always available to answer all of our questions. He is wonderful”'
           }
         ]}
       />

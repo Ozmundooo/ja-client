@@ -60,31 +60,36 @@ function LocalPicks() {
         text={"Showing love to our community is crucial, and what better way to do so than showcasing some of the best local businesses that we believe deserve the spotlight?"}
         buttons={{
           buttonOne: {
-            link: 'https://j-arealestate.com/ontario#listings',
+            link: '#ontariopicks',
             text: 'ONTARIO PICKS'
           },
           buttonTwo: {
-            link: 'https://j-arealestate.com/florida#listings',
+            link: '#floridapicks',
             text: 'FLORIDA PICKS'
           }
         }}
       />
+      <div id="ontariopicks">
       <GeneralText
         title={"Ontario"}
         text={"Ontario has become a culture hut where you can experience and learn about different cultural backgrounds through food and services. We focus on picking businesses that have gone above and beyond with their customer service experience"}
         notop={true}
       />
+      </div>
+
       <section className='cardbox'>
         <div className='cardbox__list'>
           {renderPicks(onLocals)}
         </div>
       </section>
-      <GeneralText
-        title={"Florida"}
-        text={"A curated list of must visit businesses in the beautiful state of  Florida. Get to know the culture and residents through these fantastic businesses"}
-        notop={true}
-      />
-      <section className='cardbox'>
+      <div id="floridapicks">
+        <GeneralText
+          title={"Florida"}
+          text={"A curated list of must visit businesses in the beautiful state of  Florida. Get to know the culture and residents through these fantastic businesses"}
+          notop={true}
+        />
+      </div>
+      <section className='cardbox' >
         <div className='cardbox__list'>
           {renderPicks(flLocals)}
         </div>
