@@ -145,7 +145,7 @@ function Home() {
         <img src={heroHome} className='herohome__image' alt="" />
         <div className='herohome__contentbox'>
           <img className='herohome__logo' src={jaLogo}></img>
-          <h3 className='herohome__subtitle'>Search new listings now</h3>
+          <h3 className='herohome__subtitle'>Dream home distributors</h3>
           <div className='herohome__buttonbox'>
             <Link to='/ontario'>
               <button className='herohome__button'>ONTARIO LISTINGS</button>
@@ -170,7 +170,7 @@ function Home() {
         <h2 className='abouthome__title'>About us</h2>
         <StaffIntro
           image={imageAboutus}
-          name={'Producers of Exceptional Returns'}
+          name={'Producers of exceptional returns'}
           description={`We maximize the value of your properties through expert renovations and management optimization. We collaborate with trusted sponsors that specialize in both property refurbishing and rebuilding.`}
         />
         <TestimonialVideo
