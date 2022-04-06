@@ -12,6 +12,17 @@ function PropertyOverview(props) {
 				<h4 className='propertyoverview__description'>
 					{props.description}
 				</h4>
+				
+				<div className={props.page === 'featured' ? 'propertyoverview__buttonbox' : 'propertyoverview__buttonbox propertyoverview__buttonbox--inactive'}>
+					{
+						props.virtualTour ?
+							<a href={props.virtualTour} target="_blank">
+								<button className='propertyoverview__button'>VIEW VIRTUAL TOUR</button>
+							</a> :
+							<></>
+					}
+				</div>
+
 				<div className={props.page !== 'featured' ? 'propertyoverview__buttonbox' : 'propertyoverview__buttonbox propertyoverview__buttonbox--inactive'}>
 					{
 						props.virtualTour ?

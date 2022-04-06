@@ -146,10 +146,12 @@ function PropertyListing(props) {
         sqfeet={property.sqfeet}
         built={property.built}
         description={property.description}
+        virtualTour={property.virtualTourUrl}
       />
 
       <section className='heroproperty'>
         {
+          property.propertyImage ?
           <>
             <img className='heroproperty__img' src={property.propertyImage[0]} alt="property images" />
             <div className="heroproperty__container">
@@ -161,6 +163,8 @@ function PropertyListing(props) {
             />
             </div>
           </>     
+          :
+          <></>
         }
       </section>
       <Amenities
@@ -171,6 +175,8 @@ function PropertyListing(props) {
       <PropertyDetail
         cityCoord={cityCoord}
         propertyCoord={propertyCoord}
+        baths={property.baths}
+        price={property.price}
       />
       <MortgageCalculator
         price={property.price}
