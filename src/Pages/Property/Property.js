@@ -83,7 +83,6 @@ function Property(props) {
           <img className='heroproperty__img' src={placeholderProperty} alt="property images" />
           </>
         }
-
       </section>
       <PropertyOverview
         address={propertyAddress.streetName}

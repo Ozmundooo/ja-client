@@ -8,6 +8,7 @@ import Amenities from '../../Components/Amenities/Amenities';
 import MortgageCalculator from '../../Components/MortgageCalculator/MortgageCalculator';
 import CarouselGeneral from '../../Components/CarouselGeneral/CarouselGeneral';
 import RequestForm from '../../Components/RequestForm/RequestForm';
+import LightBoxCarousel from '../../Components/LightboxCarousel/LightBoxCarouselFeatured';
 import placeholderImage from '../../assets/images/placeholder_listing.png';
 import './PropertyListing.scss';
 
@@ -146,12 +147,21 @@ function PropertyListing(props) {
         built={property.built}
         description={property.description}
       />
-      <section className='propertylisting__gallery'>
-        <img className='propertylisting__image' src={property.heroImg} />
-      </section>
-      <section className='propertylisting__videobox'>
-        <h3 className='propertylisting__title'>Virtual walk through</h3>
-        <iframe className='propertylisting__video' src={property.hero} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+
+      <section className='heroproperty'>
+        {
+          <>
+            <img className='heroproperty__img' src={property.propertyImage[0]} alt="property images" />
+            <div className="heroproperty__container">
+            <p className='heroproperty__text'>
+              {property.propertyImage ? `1 out of ${property.propertyImage.length}` : ''}
+            </p>
+            <LightBoxCarousel
+              imagesArr={property.propertyImage}
+            />
+            </div>
+          </>     
+        }
       </section>
       <Amenities
         bathroom={property.bathroom}
