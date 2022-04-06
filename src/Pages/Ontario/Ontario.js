@@ -323,7 +323,7 @@ function Ontario() {
 				title={'Ontario featured properties'}
 				images={onListings}
 			/>
-			<EmailSignup theme='navy' />
+
 			{/* <section className='steps-container'>
 				<h3 className='steps__title'>What you should know: Buying</h3>
 				<Steps title={'Step Title'} text={'text '.repeat(50)} />

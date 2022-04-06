@@ -333,8 +333,7 @@ function Florida() {
         title={'Florida featured properties'}
         images={flListings}
       />
-<EmailSignup theme='navy' />
-<br></br>
+
       <br></br>
       <section className='city' id='listings'>
         <FilterListing
