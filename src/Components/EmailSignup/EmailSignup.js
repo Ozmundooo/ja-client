@@ -5,27 +5,7 @@ function EmailSignup(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    firestore.collection('newsletters').doc().set({
-      to: [`oali@atreomedia.com`],
-      message: {
-        html: `
-          <h3>Email: ${e.target.email.value}</h3>
-        `,
-        subject: 'IMPORTANT: Email Signup',
-        text: `
-          Email: ${e.target.email.value}
-        `,
-      }
-    })
-      .then(res => {
-        console.log('Success');
-        e.target.reset();
-        // window.alert('Submitted!');
-      })
-      .catch(err => {
-        console.log('err');
-        console.log(err);
-      });
+   
   }
 
   return (

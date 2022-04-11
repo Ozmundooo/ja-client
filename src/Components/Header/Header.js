@@ -43,7 +43,7 @@ function Header(props) {
 						<Link to='/featured' className='header__link'>FEATURED LISTINGS</Link>
 					</div>
 				</nav>
-				<a className='header__buttonbox' href="https://calendly.com/julianarcila" target="_blank">
+				<a className='header__buttonbox' href="https://calendly.com/julianarcilaremax/30min" target="_blank">
 					<button className='header__button'>BOOK APPOINTMENT</button>
 				</a>
 			</header>

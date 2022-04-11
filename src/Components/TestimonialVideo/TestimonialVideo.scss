@@ -111,13 +111,13 @@
 	&__video {
 		width: 50%;
 		height: 375px;
-		background-color: grey;
+		
 		@include tablet {
 			width: 45%;
 		}
 		@include mobile {
 			width: 100%;
-			height: 180px;
+			height: 190px;
 		}
 	}
 }

@@ -3,49 +3,8 @@ import './ContactForm.scss';
 
 function ContactForm() {
 
-    function sendMessage(name, email, message) {
-      //sends the name, email and message by passing them as url parameters
-      window.location.href =
-        "https://us-central1-naishare.cloudfunctions.net/sendMail?name=" +
-        name +
-        "&email=" +
-        email +
-        "&message=" +
-        message +
-        "";
-    }
   const submitHandler = (e) => {
     e.preventDefault();
-    sendMessage(e.target.name.value, e.target.email.value, e.target.message.value)
-    firestore.collection('mail').doc().set({
-      to: [`info.jarealty@gmail.com`],
-      message: {
-        html: `
-          <h3>Name: ${e.target.name.value}</h3>
-          <h3>Email: ${e.target.email.value}</h3>
-          <h3>Location: ${e.target.location.value}</h3>
-          <h3>Message:</h3>
-          <p>${e.target.message.value}</p>
-        `,
-        subject: 'IMPORTANT: Consultation Call (Inbound Inquiry: Website)',
-        text: `
-          Name: ${e.target.name.value}
-          Email: ${e.target.email.value}
-          Location: ${e.target.location.value}
-          Message:
-          ${e.target.message.value}
-        `,
-      }
-    })
-      .then(res => {
-        console.log('Success');
-        e.target.reset();
-        window.alert('Submitted!');
-      })
-      .catch(err => {
-        console.log('err');
-        console.log(err);
-      });
   }
 
   return (

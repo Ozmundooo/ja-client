@@ -16,9 +16,17 @@
 		line-height: 2.735rem;
 		max-width: 800px;
 		text-align: center;
+		@include mobile{
+			font-size: 1.1rem;
+			margin: 0 1rem;
+		}
 	}
 	&__buttonbox {
 		margin-top: 1rem;
+		@include mobile{
+			display: flex;
+			flex-direction: row;
+		}
 	}
 	&__button {
 		background-color: $tan;
@@ -27,5 +35,8 @@
 		width: 170px;
 		height: 40px;
 		margin: 0 2rem;
+		@include mobile{
+			width: 130px;
+		}
 	}
 }

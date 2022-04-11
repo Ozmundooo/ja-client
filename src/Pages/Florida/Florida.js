@@ -328,11 +328,11 @@ function Florida() {
           }
         }}
       /> */}
-      <CarouselGeneral
+      {/* <CarouselGeneral
         linkSource={'property'}
         title={'Florida featured properties'}
         images={flListings}
-      />
+      /> */}
 
       <br></br>
       <section className='city' id='listings'>

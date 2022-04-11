@@ -31,7 +31,7 @@ function About() {
           name={'Julian Arcila'}
           position={'Principal Owner'}
           description={'With over 14 years of experience in real estate, Julian is the head and founder of J.A Real Estate Group. During these years, Julian has succeeded in creating a sustainable business based on integrity, professionalism, and accountability. Julian is eager to put his experience to work for each of his clients to help them achieve their real estate dream, and is able to do so in both English and Spanish'}
-          calendar='https://calendly.com/julianarcila'
+          calendar='https://calendly.com/julianarcilaremax/30min'
         />
         <StaffIntro
           inverse={true}
@@ -39,7 +39,7 @@ function About() {
           name={'Andres F. Bojaca'}
           position={'Real Estate Agent'}
           description={'With his strong experience in laws, foreign jurisdictions, and finance, Andres makes a powerful addition to the team. As a real estate agent, his attention to detail and critical problem solving skills allow him to tailor smart and stress-free solutions for each of our clients, both in English and Spanish'}
-          calendar='https://calendly.com/andresbzambrano'
+          calendar='https://calendly.com/andresremax/30min'
         />
       </div>  
       {/* <TestimonialVideo

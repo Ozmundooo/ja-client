@@ -34,7 +34,7 @@ function SelectBar(props) {
 
       </select>
       <a
-        href="https://calendly.com/julianarcila"
+        href="https://calendly.com/julianarcilaremax/30min"
         className='selectbar__book'
         target="_blank"
       >

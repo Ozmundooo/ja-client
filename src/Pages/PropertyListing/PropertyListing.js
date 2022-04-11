@@ -186,7 +186,9 @@ function PropertyListing(props) {
         title={ province === 'ON' ? 'Julian’s Ontario local picks' : 'Julian’s Florida local picks' }
         images={localpicks}
       />
-      <RequestForm />
+      <RequestForm
+      address = {property.address}
+      />
       <CarouselGeneral
         linkSource={'property'}
         title={'Related listings'}

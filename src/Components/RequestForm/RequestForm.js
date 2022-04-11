@@ -1,37 +1,16 @@
 import { firestore } from '../../firebase.js';
 import './RequestForm.scss';
 
-function RequestForm() {
+function RequestForm(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    firestore.collection('mail').doc().set({
-      to: [`jyou@atreomedia.com`],
-      message: {
-        html: `
-          <h3>Name: ${e.target.name.value}</h3>
-          <h3>Email: ${e.target.email.value}</h3>
-          <h3>Message:</h3>
-          <p>${e.target.message.value}</p>
-        `,
-        subject: 'IMPORTANT: Consultation Call (Inbound Inquiry: Website)',
-        text: `
-          Name: ${e.target.name.value}
-          Email: ${e.target.email.value}
-          Message:
-          ${e.target.message.value}
-        `,
-      }
-    })
-      .then(res => {
-        console.log('Success');
-        e.target.reset();
-        window.alert('Submitted!');
-      })
-      .catch(err => {
-        console.log('err');
-        console.log(err);
-      });
+
+    let name = e.target.name.value;
+    let email = e.target.email.value;
+    let message = e.target.message.value;
+    let address = props.address;
+
   }
 
   return (

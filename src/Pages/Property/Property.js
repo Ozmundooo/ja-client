@@ -130,7 +130,9 @@ function Property(props) {
         cityCoord={cityCoord}
         propertyCoord={propertyCoord}
       />
-      <RequestForm />
+      <RequestForm 
+        address = {propertyAddress.streetName}
+      />
     </>
   );
 }
