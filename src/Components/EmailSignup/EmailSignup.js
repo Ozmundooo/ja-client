@@ -30,7 +30,7 @@ function EmailSignup(props) {
         </p>
       </div>
       <form className='emailSignup__form' onSubmit={(e) => submitHandler(e)}>
-        <input className='emailSignup__input' type="email" name='email' />
+        <input className='emailSignup__input' type="email" name='email' placeholder='Enter your email' />
         <button className='emailSignup__button' type='submit'>Submit</button>
       </form>
     </section>
