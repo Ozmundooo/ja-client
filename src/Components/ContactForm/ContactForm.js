@@ -5,12 +5,16 @@ function ContactForm() {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    e.target.reset();
   }
 
   return (
     <section className='contactform'>
       <h2 className='contactform__title'>Contact us</h2>
-      <form className='contactform__form' onSubmit={(e) => submitHandler(e)}>
+      <form className='contactform__form' action="https://formsubmit.co/740cce934af42c546b08598c738a3350" method="POST" >
+        <input type="hidden" name="_subject" value="Contact Form: New Message"></input>
+        <input type="hidden" name="_captcha" value="false"></input>
+        <input type="hidden" name="_next" value={window.location.origin}></input>
         <label className='contactform__label' htmlFor="name">Enter your name *</label>
         <input
           className='contactform__textinput'

@@ -2,12 +2,6 @@ import { firestore } from '../../firebase.js';
 import './EmailSignup.scss';
 
 function EmailSignup(props) {
-
-  const submitHandler = (e) => {
-    e.preventDefault();
-   
-  }
-
   return (
     <section
       className={
@@ -29,8 +23,11 @@ function EmailSignup(props) {
           }
         </p>
       </div>
-      <form className='emailSignup__form' onSubmit={(e) => submitHandler(e)}>
+      <form className='emailSignup__form' action="https://formsubmit.co/740cce934af42c546b08598c738a3350" method="POST">
         <input className='emailSignup__input' type="email" name='email' placeholder='Enter your email' />
+        <input type="hidden" name="_subject" value="Newsletters: New Email"></input>
+        <input type="hidden" name="_captcha" value="false"></input>
+        <input type="hidden" name="_next" value={window.location.origin}></input>
         <button className='emailSignup__button' type='submit'>Submit</button>
       </form>
     </section>

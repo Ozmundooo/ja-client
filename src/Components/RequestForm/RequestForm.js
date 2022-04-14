@@ -2,15 +2,9 @@ import { firestore } from '../../firebase.js';
 import './RequestForm.scss';
 
 function RequestForm(props) {
-
+  let address = props.address;
   const submitHandler = (e) => {
     e.preventDefault();
-
-    let name = e.target.name.value;
-    let email = e.target.email.value;
-    let message = e.target.message.value;
-    let address = props.address;
-
   }
 
   return (
@@ -21,7 +15,12 @@ function RequestForm(props) {
         <p className='requestform__text'>Phone: 1-500-504-5551</p>
         <p className='requestform__text'>Email: julian@j-arealeastate.com</p>
       </div>
-      <form className='requestform__form' onSubmit={(e) => submitHandler(e)}>
+      <form className='requestform__form' action="https://formsubmit.co/740cce934af42c546b08598c738a3350" method="POST">
+      <input type="hidden" name="_subject" value="Newsletters: New Email"></input>
+        <input type="hidden" name="_captcha" value="false"></input>
+        <input type="hidden" name="Address" value={props.address}></input>
+        <input type="hidden" name="_next" value={window.location.origin}></input>
+        
         <input
           type="text"
           className='requestform__textinput'
