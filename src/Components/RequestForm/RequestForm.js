@@ -16,7 +16,7 @@ function RequestForm(props) {
         <p className='requestform__text'>Email: julian@j-arealeastate.com</p>
       </div>
       <form className='requestform__form' action="https://formsubmit.co/740cce934af42c546b08598c738a3350" method="POST">
-      <input type="hidden" name="_subject" value="Newsletters: New Email"></input>
+      <input type="hidden" name="_subject" value={props.address + ": Request Form"}></input>
         <input type="hidden" name="_captcha" value="false"></input>
         <input type="hidden" name="Address" value={props.address}></input>
         <input type="hidden" name="_next" value={window.location.origin}></input>
