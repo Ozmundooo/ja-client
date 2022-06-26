@@ -71,6 +71,7 @@ function City(props) {
       });
     if (
       props.match.params.city === 'hamilton' ||
+      props.match.params.city === 'toronto' ||
       props.match.params.city === 'burlington' ||
       props.match.params.city === 'kw' ||
       props.match.params.city === 'milton' ||
