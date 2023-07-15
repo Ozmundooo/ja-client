@@ -24,12 +24,12 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/testimonials" component={Testimonials} />
         <Route path="/localpicks" component={LocalPicks} />
-        <Route path="/florida" component={Florida} />
-        <Route path="/ontario" component={Ontario} />
+        {/* <Route path="/florida" component={Florida} />
+        <Route path="/ontario" component={Ontario} /> */}
         <Route path="/featured" exact component={FeaturedListing} />
         <Route path="/featured/property/:id" component={PropertyListing} />
-        <Route path="/property/:boardId/:property" component={Property} />
-        <Route path="/city/:city" component={City} />
+        {/* <Route path="/property/:boardId/:property" component={Property} />
+        <Route path="/city/:city" component={City} /> */}
       </Switch>
       <Footer />
     </Router>

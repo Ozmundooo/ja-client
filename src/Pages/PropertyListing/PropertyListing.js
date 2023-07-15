@@ -207,7 +207,7 @@ function PropertyListing(props) {
         price={property.price}
       />
       <MortgageCalculator price={property.price} />
-      <CarouselGeneral
+      {/* <CarouselGeneral
         linkSource={"external"}
         title={
           province === "ON"
@@ -215,13 +215,13 @@ function PropertyListing(props) {
             : "Julian’s Florida local picks"
         }
         images={localpicks}
-      />
+      /> */}
       <RequestForm address={property.address} />
-      <CarouselGeneral
+      {/* <CarouselGeneral
         linkSource={"property"}
         title={"Related listings"}
         images={relatedListings}
-      />
+      /> */}
     </>
   );
 }
